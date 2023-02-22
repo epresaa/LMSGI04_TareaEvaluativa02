@@ -3,6 +3,7 @@
 
 <reservaeventos>
     <!--    obras de teatro    -->
+    
     <teatro>
         <obra>Todas las hijas</obra>
         <actores>
@@ -105,10 +106,10 @@
         <nombrerestaurante>El clarete</nombrerestaurante>
         <diadescanso>Domingo</diadescanso>
         <horario>
-            <horamanana>
-                <horamapertura>13:30:00</horamapertura>
+        <horamanana>
+            <horamapertura>13:30:00</horamapertura>
                 <horamcierre>15:30:00</horamcierre>
-            </horamanana>
+                </horamanana>
             <horatarde>
                 <horatapertura>21:30:00</horatapertura>
                 <horatcierre>23:00:00</horatcierre>
@@ -165,7 +166,7 @@
         <mesas>90</mesas>
         <informacion tipo="web">https://eneko.restaurant/</informacion>
     </restaurante>
-
+    
     <!--    festival    -->
     <festival>
         <nombrefesti>BBKLive</nombrefesti>
@@ -186,5 +187,24 @@
         <lugar>Kobeta</lugar>
         <aforo>12000</aforo>
     </festival>
-
+    <festival>
+        <nombrefesti>Azkena</nombrefesti>
+        <conciertos>
+            <concierto>
+                <grupo tipomusica="rock">Metallica</grupo>
+                <fecha>2021-05-27</fecha>
+                <hora>09:00:00</hora>
+                <carpa>Zona Anboto</carpa>
+            </concierto>
+            <concierto>
+                <grupo tipomusica="pop">R.E.M</grupo>
+                <fecha>2021-05-28</fecha>
+                <hora>22:00:00</hora>
+                <carpa>Zona Gorbea</carpa>
+            </concierto>
+        </conciertos>
+        <lugar>Gasteiz</lugar>
+        <aforo>10000</aforo>
+    </festival>
+    
 </reservaeventos>
