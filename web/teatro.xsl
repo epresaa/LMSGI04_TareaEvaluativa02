@@ -25,9 +25,10 @@
 			<section class="teatro">
 				<h1>PROXIMAS OBRAS DE TEATRO</h1>
 				<ul>
+				
                     <xsl:apply-templates select="teatro">
                         <!-- Ordenadas por fecha -->
-                        <xsl:sort select="fechahora/@dia" order="ascending" />
+						<xsl:sort select="fechahora/@dia" order="ascending" />
                     </xsl:apply-templates>
                 </ul>
 			</section>
@@ -42,13 +43,17 @@
 
 <!-- Plantilla de las obras de teatro -->
 <xsl:template match="teatro">
-	<xsl:if test="precio&lt;20">
-        <li><u><xsl:value-of select="substring(fechahora/@dia, 6)"/>: <xsl:value-of select="obra"/></u></li>
-    </xsl:if>
-
-    <xsl:if test="precio&gt;20">
-        <li><xsl:value-of select="substring(fechahora/@dia, 6)"/>: <xsl:value-of select="obra"/></li>
-    </xsl:if>
+	<!-- Solo las obras de teatro de 2023-01 -->
+	<xsl:if test="fechahora[starts-with(@dia, '2023-01')]">
+		<!-- Las que cuestan menos de 20 -->
+		<xsl:if test="precio&lt;20">
+			<li><u><xsl:value-of select="substring(fechahora/@dia, 6)"/>: <xsl:value-of select="obra"/></u></li>
+		</xsl:if>
+		<!-- Las que cuestan mas de 20 -->
+		<xsl:if test="precio&gt;20">
+			<li><xsl:value-of select="substring(fechahora/@dia, 6)"/>: <xsl:value-of select="obra"/></li>
+		</xsl:if>
+	</xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>
