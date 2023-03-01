@@ -28,7 +28,7 @@
 				
                     <xsl:apply-templates select="teatro">
                         <!-- Ordenadas por fecha -->
-						<xsl:sort select="fechahora/@dia" order="ascending" />
+						<xsl:sort select="fechahora/@dia" order="descending" />
                     </xsl:apply-templates>
                 </ul>
 			</section>

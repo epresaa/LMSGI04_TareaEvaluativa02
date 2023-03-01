@@ -35,6 +35,10 @@ h1 {
 	margin:0;
 }
 
+.subrayado {
+	text-decoration: underline;
+}
+
 .principal {
 	display: flex;
 	flex-direction: column;
@@ -73,6 +77,18 @@ h1 {
 }
 
 /* Estilos de restaurante */
+h1 a {
+	color: #F5FDED;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	color: #F5FDED;
+	display: inline-block;
+	transform: scale(1.15);
+	transition: all 0.5s;
+}
+
 .restaurante {
 	background-color: #F5FDED;
 	color: #A44C05;
@@ -82,14 +98,6 @@ h1 {
 	margin: 2% auto;
 	padding: 15px ;
 	border-radius: 15px;
-}
-
-h1 a:link, 
-h1 a:visited,
-h1 a:hover,
-h1 a:active {
-	color: #F5FDED;
-	text-decoration: none;
 }
 
 .restaurante h3 {
